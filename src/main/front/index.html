@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rasterization Visualizer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="container">
+    <header>
+            <h1>Rasterization Algorithms</h1>
+        <p>Choose an algorithm, input the parameters, and visualize the result.</p>
+    </header>
+
+    <main>
+        <form id="raster-form">
+            <div class="form-group">
+                <label for="algorithm">Algorithm:</label>
+                <select id="algorithm" name="algorithm">
+                    <option value="dda">DDA (Line)</option>
+                    <option value="cda">CDA (Line)</option>
+                    <option value="bresenhamLine">Bresenham (Line)</option>
+                    <option value="bresenhamCircle">Bresenham (Circle)</option>
+                </select>
+            </div>
+
+            <div id="line-inputs" class="form-group">
+                <label>Start Point (x0, y0):</label>
+                <input type="number" id="x0" name="x0" placeholder="x0" required>
+                <input type="number" id="y0" name="y0" placeholder="y0" required>
+                <label>End Point (x1, y1):</label>
+                <input type="number" id="x1" name="x1" placeholder="x1" required>
+                <input type="number" id="y1" name="y1" placeholder="y1" required>
+            </div>
+
+            <div id="circle-inputs" class="form-group hidden">
+                <label>Center (x, y):</label>
+                <input type="number" id="cx" name="cx" placeholder="Center X">
+                <input type="number" id="cy" name="cy" placeholder="Center Y">
+                <label>Radius:</label>
+                <input type="number" id="radius" name="radius" placeholder="Radius">
+            </div>
+
+            <button type="submit" class="btn-primary">Rasterize</button>
+        </form>
+
+        <canvas id="canvas" width="500" height="500"></canvas>
+    </main>
+
+    <footer>
+        <p>Made by Oleg Raytsev | 2024</p>
+    </footer>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
