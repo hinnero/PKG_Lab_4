@@ -27,19 +27,19 @@
 
             <div id="line-inputs" class="form-group">
                 <label>Start Point (x0, y0):</label>
-                <input type="number" id="x0" name="x0" placeholder="x0" required>
-                <input type="number" id="y0" name="y0" placeholder="y0" required>
+                <input type="number" id="x0" name="x0" placeholder="x0" required min="0" max="500">
+                <input type="number" id="y0" name="y0" placeholder="y0" required min="0" max="500">
                 <label>End Point (x1, y1):</label>
-                <input type="number" id="x1" name="x1" placeholder="x1" required>
-                <input type="number" id="y1" name="y1" placeholder="y1" required>
+                <input type="number" id="x1" name="x1" placeholder="x1" required min="0" max="500">
+                <input type="number" id="y1" name="y1" placeholder="y1" required min="0" max="500">
             </div>
 
             <div id="circle-inputs" class="form-group hidden">
                 <label>Center (x, y):</label>
-                <input type="number" id="cx" name="cx" placeholder="Center X">
-                <input type="number" id="cy" name="cy" placeholder="Center Y">
+                <input type="number" id="cx" name="cx" placeholder="Center X" min="0" max="500">
+                <input type="number" id="cy" name="cy" placeholder="Center Y" min="0" max="500">
                 <label>Radius:</label>
-                <input type="number" id="radius" name="radius" placeholder="Radius">
+                <input type="number" id="radius" name="radius" placeholder="Radius" min="0" max="500">
             </div>
 
             <button type="submit" class="btn-primary">Rasterize</button>
